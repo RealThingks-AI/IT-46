@@ -1,9 +1,14 @@
 import { useLocation } from "react-router-dom";
 import {
-  BookOpen,
-  CheckCircle,
-  Search,
+  LayoutDashboard,
+  Headphones,
+  Package,
   Settings,
+  Wifi,
+  FileText,
+  BarChart3,
+  Bell,
+  Shield,
   ChevronLeft,
   User,
   LogOut,
@@ -24,10 +29,16 @@ import {
 import { Button } from "@/components/ui/button";
 
 const menuItems = [
-  { title: "Skills", url: "/skills", icon: BookOpen },
-  { title: "Approvals", url: "/approvals", icon: CheckCircle },
-  { title: "Skill Explorer", url: "/skill-explorer", icon: Search },
-  { title: "Admin", url: "/admin", icon: Settings },
+  { title: "Dashboard", url: "/", icon: LayoutDashboard },
+  { title: "Support Center", url: "/support", icon: Headphones },
+  { title: "Inventory & Procurement", url: "/inventory", icon: Package },
+  { title: "System & Updates", url: "/system-updates", icon: Settings },
+  { title: "Network & Connectivity", url: "/network", icon: Wifi },
+  { title: "Access Control", url: "/access", icon: Shield },
+  { title: "Audit", url: "/audit", icon: FileText },
+  { title: "Reports & Analytics", url: "/reports", icon: BarChart3 },
+  { title: "Notifications", url: "/notifications", icon: Bell },
+  { title: "Admin Console", url: "/admin", icon: Settings },
 ];
 
 export function AppSidebar() {
@@ -35,7 +46,8 @@ export function AppSidebar() {
   const location = useLocation();
 
   const isActive = (path: string) => {
-    return location.pathname === path;
+    if (path === "/") return location.pathname === "/";
+    return location.pathname.startsWith(path);
   };
 
   return (
