@@ -1,6 +1,6 @@
-import { StatsCard } from "@/components/dashboard/StatsCard";
-import { ActivityWidget } from "@/components/dashboard/ActivityWidget";
-import { ChartCard } from "@/components/dashboard/ChartCard";
+import { StatsCard } from "./StatsCard";
+import { ActivityWidget } from "./ActivityWidget";
+import { ChartCard } from "./ChartCard";
 import { Button } from "@/components/ui/button";
 import {
   Ticket,
