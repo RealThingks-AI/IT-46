@@ -27,6 +27,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
+import { NotificationPanel } from "@/components/NotificationPanel";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const menuItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
@@ -91,6 +93,15 @@ export function AppSidebar() {
 
       <SidebarFooter>
         <SidebarSeparator />
+        <div className="flex items-center gap-2 px-2 pb-2">
+          <NotificationPanel />
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" asChild>
+            <Link to="/profile">
+              <User className="h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton onClick={toggleSidebar} tooltip="Collapse">

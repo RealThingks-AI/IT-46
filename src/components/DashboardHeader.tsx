@@ -1,9 +1,6 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Search, User } from "lucide-react";
-import { NotificationPanel } from "@/components/NotificationPanel";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Search } from "lucide-react";
 
 export function DashboardHeader() {
   return (
@@ -21,11 +18,6 @@ export function DashboardHeader() {
         </div>
 
         <div className="flex items-center gap-3">
-          <NotificationPanel />
-          <ThemeToggle />
-          <Button variant="ghost" size="icon">
-            <User className="h-5 w-5" />
-          </Button>
         </div>
       </div>
     </header>
