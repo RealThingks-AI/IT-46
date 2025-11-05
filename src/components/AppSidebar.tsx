@@ -93,10 +93,6 @@ export function AppSidebar() {
 
       <SidebarFooter>
         <SidebarSeparator />
-        <div className="space-y-1 px-2 pb-2">
-          <NotificationPanel />
-          <ThemeToggle />
-        </div>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton onClick={toggleSidebar} tooltip="Collapse">
